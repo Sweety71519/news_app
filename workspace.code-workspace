@@ -1,0 +1,48 @@
+{
+	"folders": [
+		{
+			"name": "API",
+			"path": "api"
+		},
+		{
+			"name": "WEB",
+			"path": "web"
+		},
+		{
+			"name": "DB",
+			"path": "script"
+		}
+	"settings": {
+		"editor.tabSize": 4,
+		"editor.rulers": [
+			88,
+			120
+		],
+		"files.exclude": {
+			"**/__pycache__": true,
+			"**/*.pyc: {\"when\": \"$(basename).py\"}": true,
+			"api/.mypy_cache/": true,
+			"api/.pytest_cache/": true,
+			"api/*.egg-info": true
+		},
+		"python.analysis.openFilesOnly": false,
+		"python.testing.pytestEnabled": true,
+		"python.testing.pytestArgs": [
+			"--rootdir",
+			"${workspaceFolder}/api/tests"
+		],
+		"python.formatting.provider": "black",
+		"python.linting.enabled": true,
+		"python.linting.lintOnSave": true,
+		"python.linting.pylintEnabled": false,
+		"python.linting.mypyEnabled": true,
+		"python.linting.mypyArgs": [
+			"--config-file=api/mypy.ini",
+		],
+		// "python.linting.flake8Enabled": true,
+		"python.linting.flake8Args": [
+			"--config=api/.flake8",
+		],
+		"terminal.integrated.scrollback": 99999999999999999999,
+	}
+}
